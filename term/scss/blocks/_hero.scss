@@ -1,0 +1,27 @@
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    height: 100vh;
+    .hero__items {
+        padding-block: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .hero-left__side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+            gap: 30px;
+            .btns {
+                display: flex;
+                gap: 18px;
+            }
+        }
+        .hero-right__side {
+            img {
+                width: 600px;
+            }
+        }
+    }
+}
