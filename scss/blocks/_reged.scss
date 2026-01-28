@@ -1,0 +1,94 @@
+.registered-users {
+    background-color: #1e293b;
+    min-height: 400px;
+    padding: 40px 20px;
+    border-radius: 16px;
+    margin-top: 50px;
+    color: #ffffff;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    h2.title {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        min-width: 500px;
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        thead {
+            background-color: #111827;
+            font-weight: 600;
+            color: #38bdf8;
+        }
+
+        tbody {
+            tr {
+                background-color: #1e293b;
+                transition: background 0.3s ease;
+
+                &:nth-child(even) {
+                    background-color: #172133;
+                }
+
+                &:hover {
+                    background-color: #0ea5e9;
+                    color: #0f172a;
+
+                    td {
+                        color: #0f172a;
+                    }
+                }
+
+                td {
+                    border-bottom: 1px solid #0f172a;
+                }
+
+                button.delete-btn {
+                    background-color: #ef4444;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 6px 12px;
+                    cursor: pointer;
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 600;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #b91c1c;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#usersTable tbody tr {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+#usersTable tbody tr.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#usersTable tbody tr.remove {
+    opacity: 0;
+    transform: translateX(100%);
+}

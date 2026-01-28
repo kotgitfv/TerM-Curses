@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TerM curses</title>
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- FONT AWESOME -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/style.min.css" />
+    </head>
+    <body id="start">
+        <header class="header">
+            <div class="container header__items">
+                <a href="#start"><img src="./img/logo.png" alt="" class="header__logo" /></a>
+
+                <div class="header__burger" id="burger-menu">
+                    <span></span>
+                </div>
+
+                <div class="header__links">
+                    <a href="#hero" class="header__link">Главная</a>
+                    <a href="#about" class="header__link">О Платформе</a>
+                    <a href="#curses" class="header__link">Курсы</a>
+                    <a href="#reg" class="header__link">Регистрация</a>
+                    <a href="#reged" class="header__link">Пользователи</a>
+                </div>
+            </div>
+        </header>
+
+        <hero id="hero" class="hero">
+            <div class="container hero__items">
+                <div class="hero-left__side">
+                    <h1 class="title hero__title">
+                        Learn skills. Change your term.
+                    </h1>
+                    <p class="hero__text">
+                        Онлайн-курсы по современным цифровым профессиям
+                    </p>
+                    <div class="btns">
+                        <a href="#reg"
+                            ><button class="light__btn hero-btn">
+                                Start Learning
+                            </button></a
+                        >
+                        <a href="#curses">
+                            <button class="dark__btn hero-btn">
+                                Explore Courses
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right__side ">
+                    <img src="./img/hero/hero-2.png" alt="" />
+                </div>
+            </div>
+        </hero>
+
+        <section id="about" class="about">
+            <div class="container about__items">
+                <h2 class="about__title title">
+                    TERM — образовательная онлайн-платформа для освоения
+                    востребованных IT-навыков. <br />
+                    Обучение основано на практике и реальных задачах.
+                </h2>
+                <div class="about__cards">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-hourglass-half"></i>
+                        </div>
+                        <div class="card__texts">
+                            Забудь о сухой теории. Пиши код с первого урока,
+                            максимально приближенные к рабочим будням.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-regular fa-chess-knight"></i>
+                        </div>
+                        <div class="card__texts">
+                            Senior-разработчики из топовых компаний помогут
+                            разобрать сложные темы и проведут детальный ревью
+                            твоего кода.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="card__texts">
+                            Собери мощное портфолио из реальных кейсов: от
+                            простых скриптов до полноценных веб-сервисов за
+                            которых не стыдно.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="curses" class="courses">
+            <div class="container">
+                <h2 class="courses__title">Our Courses</h2>
+                <div class="courses__grid">
+                    <div class="course-card">
+                        <h3>Web Development</h3>
+                        <p>С нуля до junior-разработчика</p>
+                        <span class="course-duration">3 months</span>
+                        <button>Enroll</button>
+                    </div>
+                    <div class="course-card">
+                        <h3>Python Basics</h3>
+                        <p>Программирование для новичков</p>
+                        <span class="course-duration">2 months</span>
+                        <button>Enroll</button>
+                    </div>
+                    <div class="course-card">
+                        <h3>UI/UX Design</h3>
+                        <p>Дизайн интерфейсов для начинающих</p>
+                        <span class="course-duration">2 months</span>
+                        <button>Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reg" class="registration">
+            <div class="container reg__items">
+                <div class="left-side">
+                    <h3 class="title">Регистрация</h3>
+                    <form class="form">
+                        <input
+                            placeholder="Введите имя"
+                            type="text"
+                            class="inp"
+                        />
+                        <input
+                            placeholder="Введите Email"
+                            type="email"
+                            class="inp"
+                        />
+                        <input
+                            required
+                            placeholder="Создайте пароль"
+                            type="password"
+                            class="inp"
+                        />
+                        <div class="select__wrapper">
+                            <select
+                                id="direction"
+                                name="direction"
+                                class="registration__input select__field"
+                            >
+                                <option value="" disabled selected>
+                                    Выберите курс...
+                                </option>
+                                <option value="frontend">
+                                    Web Development
+                                </option>
+                                <option value="design">UI/UX Design</option>
+                                <option value="data">Pyton Basics</option>
+                            </select>
+
+                            <button type="submit" class="light__btn reg__btn">
+                                Создать аккаунт
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="right-side">
+                    <ul class="list">
+                        <h2 class="title">Наши Преимущества</h2>
+                        <li class="list_text">
+                            Карьерный старт — помощь в трудоустройстве.
+                        </li>
+                        <li class="list_text">
+                            80% практики — обучение на реальных кейсах.
+                        </li>
+                        <li class="list_text">
+                            Личный ментор — код-ревью от Senior-экспертов.
+                        </li>
+                        <li class="list_text">
+                            Мощное портфолио — 3+ проекта в твоем GitHub.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="reged" class="registered-users">
+            <h2 class="title">Зарегистрированные пользователи</h2>
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Email</th>
+                        <th>Курс</th>
+                        <th>Удалить</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <script src="./js/scripts.js"></script>
+    </body>
+</html>

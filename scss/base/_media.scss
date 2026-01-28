@@ -1,0 +1,311 @@
+// 1200 - 993 (960px container)
+// 992 - 769 (720px)
+// 768 - 577 (540px)
+// 576 - 320 (315px)
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .header {
+        .header__items {
+            .header__links {
+                gap: 18px;
+            }
+        }
+    }
+    .hero {
+        .hero__items {
+            .hero-right__side {
+                img {
+                    width: 450px;
+                }
+            }
+        }
+    }
+    .about {
+        .about__items {
+            .about__cards {
+                margin-top: 60px;
+                gap: 15px;
+
+                .card {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .header {
+        .header__items {
+            .header__logo {
+                width: 150px;
+            }
+            .header__links {
+                gap: 12px;
+                .header__link {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .hero {
+        .hero__items {
+            gap: 30px;
+            .hero-left__side {
+                .hero__title {
+                    font-size: 36px;
+                }
+                gap: 20px;
+            }
+            .hero-right__side {
+                img {
+                    width: 350px;
+                }
+            }
+        }
+    }
+    .about {
+        .about__items {
+            .about__cards {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 30px;
+                .card {
+                    width: 45%;
+                    min-height: 280px;
+                    &:nth-child(3) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .registration {
+        .left-side,
+        .right-side {
+            padding: 40px;
+        }
+    }
+    .registered-users {
+        h2.title { font-size: 1.7rem; }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .header {
+        position: sticky;
+        .header__items {
+            flex-direction: row;
+            gap: 12px;
+            position: relative;
+
+            .header__burger {
+                display: block;
+                z-index: 100;
+            }
+            .header__links {
+                position: absolute;
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: auto;
+                padding: 30px 0;
+                background-color: var(--cards);
+                opacity: 0.98;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                transition: 0.4s all ease-in-out;
+                z-index: 50;
+                visibility: hidden;
+                &.active {
+                    top: 0;
+                    visibility: visible;
+                }
+                .header__link {
+                    font-size: 28px;
+                    color: #ffffff !important;
+                    text-align: center;
+                    width: 100%;
+                    display: block;
+
+                    &:hover {
+                        color: var(--acsent) !important;
+                    }
+                }
+            }
+            .header__links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+    .hero {
+        padding-top: 40px;
+        .hero__items {
+            flex-direction: column;
+            text-align: center;
+
+            .hero-left__side {
+                align-items: center;
+                margin-bottom: 40px;
+            }
+
+            .hero-right__side {
+                img {
+                    width: 100%;
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+    .about {
+        padding-block: 40px;
+
+        .about__items {
+            .about__title {
+                font-size: 20px;
+                br {
+                    display: none;
+                }
+            }
+
+            .about__cards {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 40px;
+
+                .card {
+                    width: 100%;
+                    max-width: 350px;
+                    min-height: auto;
+                    gap: 20px;
+
+                    i {
+                        font-size: 60px;
+                    }
+                }
+            }
+        }
+    }
+    .registration {
+        padding-block: 40px;
+
+        .reg__items {
+            border-radius: 20px;
+        }
+
+        .left-side {
+            padding: 30px 20px;
+            order: 1;
+
+            .title {
+                font-size: 28px;
+                text-align: center;
+            }
+        }
+
+        .right-side {
+            padding: 30px 20px;
+            order: 2;
+
+            .title {
+                font-size: 24px;
+                text-align: center;
+            }
+            .list {
+                gap: 20px;
+            }
+            .list_text {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 315px;
+    }
+    .header {
+        .header__items {
+            .header__logo {
+                width: 130px;
+            }
+            .header__links {
+                gap: 8px 15px;
+                .header__link {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .hero {
+        .hero__items {
+            padding-block: 40px;
+
+            .hero-left__side {
+                .hero__title {
+                    font-size: 28px;
+                }
+                .hero__text {
+                    font-size: 16px;
+                }
+
+                .btns {
+                    flex-direction: column;
+                    width: 100%;
+                    .hero-btn {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .hero-right__side {
+                img {
+                    max-width: 280px;
+                }
+            }
+        }
+    }
+    .about {
+        .about__items {
+            .about__cards {
+                .card {
+                    max-width: 100%;
+                    padding: 20px;
+
+                    .card__texts {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .registration {
+        .left-side {
+            padding: 25px 15px;
+            .title {
+                font-size: 24px;
+            }
+        }
+        .right-side {
+            padding: 25px 15px;
+            .list_text {
+                font-size: 14px;
+            }
+        }
+    }
+}
